@@ -1,0 +1,6 @@
+1. make hamburger menu for mobile []
+2. cleanup styling in story.html [x]
+3. create spoiler filter for story.html [x]
+4. create fake webshop in webshop.html []
+5. look up and create the characters page based on the found results (2016 - The Ancient Gods part 2) []
+6. look up and create the weapons page based on the found results (2016 - The Ancient Gods part 2) []
