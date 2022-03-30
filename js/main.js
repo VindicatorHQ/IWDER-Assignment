@@ -127,3 +127,50 @@ menuItems.forEach(
         menuItem.addEventListener("click", toggleMenu);
     }
 );
+
+const checkBoxes = document.querySelectorAll("input[type=checkbox]");
+
+if (checkBoxes)
+{
+    checkBoxes.forEach(checkBox => {
+        checkBox.addEventListener('change', function() {
+            const cards = document.getElementsByClassName("char-container");
+            const items = document.getElementsByClassName("char-item");
+
+            Array.from(cards).forEach(card => {
+                if (card.getAttribute("data-weapons") === this.getAttribute("data-weapon-sort"))
+                {
+                    const header = document.getElementById(card.getAttribute("data-weapons"));
+
+                    if (this.checked)
+                    {
+                        card.style.display = "flex";
+                        header.style.display = "block";
+                    }
+                    else {
+                        card.style.display = "none";
+                        header.style.display = "none";
+                    }
+                }
+            });
+
+            Array.from(items).forEach(item => {
+                const data_weapon_sort = this.getAttribute("data-weapon-sort");
+                const data_weapons = item.getAttribute("data-weapons");
+                const data_weapon = item.getAttribute("data-weapon");
+
+                if (data_weapons === data_weapon_sort || data_weapon === data_weapon_sort)
+                {
+                    if (this.checked)
+                    {
+                        item.style.display = "block";
+                    }
+                    else
+                    {
+                        item.style.display = "none";
+                    }
+                }
+            });
+        });
+    });
+}

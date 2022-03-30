@@ -40,11 +40,41 @@
 <main class="bg-black">
     <article class="container">
         <header class="intro">
+            <h1>DOOM 2016 and DOOM Eternal Weapons</h1>
+        </header>
+
+        <header>
+            <h2 class="text-center">Sort Selector</h2>
+        </header>
+
+        <section class="sort-container">
+            <section class="sort-item">
+                <h4>Single Player</h4>
+                <input type="checkbox" data-weapon-sort="single-player" checked>
+            </section>
+
+            <section class="sort-item">
+                <h4>Multiplayer</h4>
+                <input type="checkbox" data-weapon-sort="multi-player" checked>
+            </section>
+
+            <section class="sort-item">
+                <h4>DOOM 2016</h4>
+                <input type="checkbox" data-weapon-sort="doom-2016" checked>
+            </section>
+
+            <section class="sort-item">
+                <h4>DOOM Eternal</h4>
+                <input type="checkbox" data-weapon-sort="doom-eternal" checked>
+            </section>
+        </section>
+
+        <header class="sub-title" id="single-player">
             <h1>Single Player Weapons</h1>
         </header>
 
-        <section class="char-container">
-            <section class="char-item">
+        <section class="char-container" data-weapons="single-player">
+            <section class="char-item" data-weapons="doom-2016" data-weapon="doom-eternal">
                 <header class="text">
                     <h2>
                         Frag Grenade
@@ -52,13 +82,13 @@
                 </header>
 
                 <figure>
-                    <img class="char-image" src="images/frag_grenade.jpg" alt="Frag Grenade">
+                    <img class="char-image-big" src="images/frag_grenade.jpg" alt="Frag Grenade">
                 </figure>
 
                 <h3>Game appearances:</h3>
                 <p>DOOM 2016, DOOM Eternal</p>
 
-                <h3 class="mt-3">DLC appearances:</h3>
+                <h3>DLC appearances:</h3>
                 <p>The Ancient Gods Part One + Two</p>
 
                 <button class="modalButton" data-weapon-button value="frag_grenade">
@@ -66,7 +96,7 @@
                 </button>
 
                 <section class="modal" data-weapon="frag_grenade" id="frag_grenade">
-                    <section class="char-modal">
+                    <section class="modal-content">
                         <section class="close-button" data-weapon-close-button="frag_grenade">&times;</section>
                         <h2>Frag Grenade</h2>
 
@@ -78,14 +108,1375 @@
                     </section>
                 </section>
             </section>
+
+            <section class="char-item" data-weapons="doom-2016">
+                <header class="text">
+                    <h2>
+                        Gauss Cannon
+                    </h2>
+                </header>
+
+                <figure>
+                    <img class="char-image-big" src="images/gauss_cannon.jpg" alt="Gauss Cannon">
+                </figure>
+
+                <h3>Game appearances:</h3>
+                <p>DOOM 2016</p>
+
+                <h3>DLC appearances:</h3>
+                <p>None</p>
+
+                <button class="modalButton" data-weapon-button value="gauss_cannon">
+                    Show More!
+                </button>
+
+                <section class="modal" data-weapon="gauss_cannon" id="gauss_cannon">
+                    <section class="char-modal">
+                        <section class="close-button" data-weapon-close-button="gauss_cannon">&times;</section>
+                        <h2>Gauss Cannon</h2>
+
+                        <p class="ws-pre">
+                            The Gauss Cannon is a powerful and incredibly accurate weapon that fires steel flechettes (metal spikes essentially) at extremely high velocities using a magnetized chamber. Most enemies can be killed with one shot, though larger enemies, such as the Cacodemon and Baron of Hell, require more shots to kill.
+
+                            -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Gauss_Cannon" target="_blank">(link)</a>
+                        </p>
+
+                        <h3>Modifications</h3>
+                        <table class="weapon-table">
+                            <tbody>
+                            <tr>
+                                <th colspan="3" class="ws-pre">
+                                    Precision Bolt
+
+                                    <small>Use the Weapon Mod button to zoom in and charge a high damage shot.</small>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Energy Efficient</b>
+                                </td>
+                                <td>
+                                    Reduced time to max charge and reduced time between shots.
+                                </td>
+                                <td rowspan="2">
+                                    3 / 6 Weapon Upgrade Points
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Light Weight</b>
+                                </td>
+                                <td>
+                                    Move at full speed when zoomed in.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Volatile Discharge</b>
+                                </td>
+                                <td>
+                                    Demons killed by the Precision Bolt will explode, dealing damage to nearby demons.
+                                </td>
+                                <td>
+                                    Purchase all upgrades and complete the Weapon Mastery challenge
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="weapon-table">
+                            <tbody>
+                            <tr>
+                                <th colspan="3" class="ws-pre">
+                                    Siege Mode
+
+                                    <small>Use the Weapon Mod button to charge up a powerful beam that penetrates targets. Movement is disabled while using Siege Mode.</small>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Outer Beam</b>
+                                </td>
+                                <td>
+                                    The beam now has a devastating area of effect around it.
+                                </td>
+                                <td rowspan="2">
+                                    3 / 6 Weapon Upgrade Points
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Reduced Charge Time</b>
+                                </td>
+                                <td>
+                                    Beam charge time is reduced.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Mobile Siege</b>
+                                </td>
+                                <td>
+                                    Allows movement while using Siege Mode.
+                                </td>
+                                <td>
+                                    Purchase all upgrades and complete the Weapon Mastery challenge
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </section>
+            </section>
+
+            <section class="char-item" data-weapons="doom-2016" data-weapon="doom-eternal">
+                <header class="text">
+                    <h2>
+                        Heavy Assault Rifle
+                    </h2>
+                </header>
+
+                <figure>
+                    <img class="char-image-big" src="images/heavy_assault_rifle.jpg" alt="Heavy Assault Rifle">
+                </figure>
+
+                <h3>Game appearances:</h3>
+                <p>DOOM 2016, DOOM Eternal (Heavy Cannon)</p>
+
+                <h3>DLC appearances:</h3>
+                <p>The Ancient Gods Part One + Two</p>
+
+                <button class="modalButton" data-weapon-button value="heavy_assault_rifle">
+                    Show More!
+                </button>
+
+                <section class="modal" data-weapon="heavy_assault_rifle" id="heavy_assault_rifle">
+                    <section class="char-modal">
+                        <section class="close-button" data-weapon-close-button="heavy_assault_rifle">&times;</section>
+                        <h2>Gauss Cannon</h2>
+
+                        <h3>DOOM 2016</h3>
+                        <p class="ws-pre">
+                            Based on the description and characteristics, the Heavy Assault Rifle is more like a heavy machine gun than an assault rifle by early 21st century standards. It fires from a closed bolt, but is belt fed. Additionally, it is stated that it fires a .50 caliber FMJ round. Judging by the cartridge's appearance, it is roughly equivalent to the .50 BMG round, which has historically only been used for heavy machine guns and sniper/anti-material rifles. Its size and power might explain why it has been supplemented by the Plasma Rifle. However, at least some UAC soldiers utilize a form of power armor, which might allow a single user to fire the high powered, high capacity gun as if it were an assault rifle, and the Doom Slayer in his Praetor Suit is more than capable of doing the same.
+                        </p>
+
+                        <h3>Modifications</h3>
+                        <table class="weapon-table">
+                            <tbody>
+                            <tr>
+                                <th colspan="3" class="ws-pre">
+                                    Tactical Scope
+
+                                    <small>Attaches a Tactical Scope that allows for zooming in on targets with the Weapon Mod button.</small>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Uranium Coating</b>
+                                </td>
+                                <td>
+                                    Bullets fired while zoomed will penetrate through targets.
+                                </td>
+                                <td rowspan="3">
+                                    1 / 3 / 5 Weapon Upgrade Points
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Skull Cracker</b>
+                                </td>
+                                <td>
+                                    Bullets fired while zoomed will deal additional headshot damage.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Light Weight</b>
+                                </td>
+                                <td>
+                                    Move faster when zoomed in with the tactical Scope.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Devastator Rounds</b>
+                                </td>
+                                <td>
+                                    Ammunition fired while zoomed uses experimental, heavy damage rounds.
+                                </td>
+                                <td>
+                                    Purchase all upgrades and complete the Weapon Mastery challenge
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="weapon-table">
+                            <tbody>
+                            <tr>
+                                <th colspan="3" class="ws-pre">
+                                    Micro Missiles
+
+                                    <small>Hold the Weapon Mod button to bring up a rack of Micro Missiles.</small>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Ammo Efficient</b>
+                                </td>
+                                <td>
+                                    Reduces the ammo cost of Micro Missiles.
+                                </td>
+                                <td rowspan="3">
+                                    1 / 3 / 5 Weapon Upgrade Points
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Advanced Loader</b>
+                                </td>
+                                <td>
+                                    Greatly improves reload time for Micro Missiles.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Quick Launcher</b>
+                                </td>
+                                <td>
+                                    Instantly activate the Micro Missiles rack when it is ready to fire.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Bottomless Missiles</b>
+                                </td>
+                                <td>
+                                    Micro Missiles can be fired indefinitely without requiring a reload.
+                                </td>
+                                <td>
+                                    Purchase all upgrades and complete the Weapon Mastery challenge
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Heavy_Assault_Rifle" target="_blank">(link)</a>
+
+                        <h3>DOOM Eternal</h3>
+                        <p class="ws-pre">
+                            The Heavy Cannon is a weapon in Doom Eternal. It is functionally similar to the Heavy Assault Rifle seen previously in Doom (2016).
+
+                            As before, the modifications available are either a precision scope for long-range fire, or a micro-missile launcher which launches small missiles with a narrow seeking angle: these explode with a small amount of splash damage a short time after impact. The scope functionality has been changed somewhat since the previous game, however: it is a drastically slower single-shot mode, and uses six ammunition per shot when aimed.
+
+                            The micro-missiles are essentially the same, save that there are now launchers on both sides of the barrel for a total of 12 shots between loading pauses. There is no longer an upgrade to reduce ammo consumption, as this has been replaced with a new "Primary Charger" upgrade. With this, a kill with standard gunshots from the Heavy Cannon (with the Micro Missile mod equipped) will supercharge the weapon, causing it to glow red for five seconds. In this state missile damage is increased by 30%: with the "Bottomless Missiles" Mastery, this results in the Heavy Cannon being able to deal more damage per second than the Chaingun in Mobile Turret form. Additionally, the micro-missiles can damage the Doom Hunter even when the shield is on.
+                        </p>
+
+                        <h3>Modifications</h3>
+                        <table class="weapon-table">
+                            <thead>
+                            <tr>
+                                <th>
+                                    Modification
+                                </th>
+                                <th>
+                                    Upgrades
+                                </th>
+                                <th>
+                                    Mastery
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    Precision Bolt
+                                </td>
+                                <td class="ws-pre">Mobility
+                                    Fast Loader
+                                </td>
+                                <td>
+                                    Headshot Blast
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Micro Missiles
+                                </td>
+                                <td class="ws-pre">Quick Recharger
+                                    Instant Loader
+                                    Primary Charger
+                                </td>
+                                <td>
+                                    Bottomless Missiles
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Heavy_Cannon" target="_blank">(link)</a>
+                    </section>
+                </section>
+            </section>
+
+            <section class="char-item" data-weapons="doom-2016" data-weapon="doom-eternal">
+                <header class="text">
+                    <h2>
+                        Combat Shotgun
+                    </h2>
+                </header>
+
+                <figure>
+                    <img class="char-image-big" src="images/combat_shotgun.jpg" alt="Combat Shotgun">
+                </figure>
+
+                <h3>Game appearances:</h3>
+                <p>DOOM 2016, DOOM Eternal</p>
+
+                <h3>DLC appearances:</h3>
+                <p>The Ancient Gods Part One + Two</p>
+
+                <button class="modalButton" data-weapon-button value="combat_shotgun">
+                    Show More!
+                </button>
+
+                <section class="modal" data-weapon="combat_shotgun" id="combat_shotgun">
+                    <section class="char-modal">
+                        <section class="close-button" data-weapon-close-button="combat_shotgun">&times;</section>
+                        <h2>Combat Shotgun</h2>
+
+                        <h3>DOOM 2016</h3>
+                        <p class="ws-pre">
+                            The DS-117 Shotgun, more commonly known as the Combat Shotgun, is a weapon featured in Doom (2016).
+
+                            "The UAC shotgun disperses a spread of high velocity buckshot for maximum impact against the enemy. Ideally suited for the operative who requires a speedy response for deadly close encounters, the wide coverage of this weapon loses impact at long range. The weapon is forged from a high quality Titanium Steel alloy to ensure maximum reliability, repeat rate, and yield strength."
+                        </p>
+
+                        <h3>Modifications</h3>
+                        <table class="weapon-table">
+                            <tbody>
+                            <tr>
+                                <th colspan="3" class="ws-pre">
+                                    Charged Burst
+
+                                    <small>Hold the Weapon Mod button to charge up a three round burst with tighter spread.</small>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Speedy Recovery</b>
+                                </td>
+                                <td>
+                                    Reduces the recharge time between bursts.
+                                </td>
+                                <td rowspan="3">
+                                    1 / 3 / 5 Weapon Upgrade Points
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Rapid Fire</b>
+                                </td>
+                                <td>
+                                    Increases the fire rate of the burst.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Quick Load</b>
+                                </td>
+                                <td>
+                                    Reduces the loading time for the Charged Burst.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Power Shot</b>
+                                </td>
+                                <td>
+                                    Successfully hitting all three shots from the Charged Burst will increase the damage of the next burst. This effect does not stack.
+                                </td>
+                                <td>
+                                    Purchase all upgrades and complete the Weapon Mastery challenge
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="weapon-table">
+                            <tbody>
+                            <tr>
+                                <th colspan="3" class="ws-pre">
+                                    Explosive Shot
+
+                                    <small>Hold the Weapon Mod button to charge up an arcing explosive round.</small>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Speedy Recovery</b>
+                                </td>
+                                <td>
+                                    Reduces the recharge time between explosive shots.
+                                </td>
+                                <td rowspan="3">
+                                    1 / 3 / 5 Weapon Upgrade Points
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Bigger Boom</b>
+                                </td>
+                                <td>
+                                    Increases the size of the explosion.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Instant Load</b>
+                                </td>
+                                <td>
+                                    Removes the loading time for an explosive shot.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Cluster Strike</b>
+                                </td>
+                                <td>
+                                    Getting a direct hit with an Explosive Shot will spawn cluster bombs that deal additional damage.
+                                </td>
+                                <td>
+                                    Purchase all upgrades and complete the Weapon Mastery challenge
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Combat_Shotgun/Doom_(2016)" target="_blank">(link)</a>
+
+                        <h3>DOOM Eternal</h3>
+                        <p class="ws-pre">
+                            The Combat Shotgun is a returning weapon in Doom Eternal. It has modifications similar to the one in Doom (2016), except it launches up to three timed sticky grenades for the first mod (Five Spot enables up to five), and the second mod turns the shotgun into a full-blown full-auto Gatling shotgun.
+                        </p>
+
+                        <h3>Modifications</h3>
+                        <table class="weapon-table">
+                            <thead>
+                            <tr>
+                                <th>
+                                    Modification
+                                </th>
+                                <th>
+                                    Upgrades
+                                </th>
+                                <th>
+                                    Mastery
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    Sticky Bombs
+                                </td>
+                                <td class="ws-pre">Quick Rack (Cost: 3)
+                                    Bigger Boom (Cost: 6)
+                                </td>
+                                <td>
+                                    Five Spot (Destroy 25 Arachnotron turrets)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Full Auto
+                                </td>
+                                <td class="ws-pre">Quick Recovery (Cost: 1)
+                                    Faster Transform (Cost: 3)
+                                    Fast Feet (Cost: 6)
+                                </td>
+                                <td>
+                                    Salvo Extender (Kill 15 Pinkies)
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Combat_Shotgun/Doom_Eternal" target="_blank">(link)</a>
+                    </section>
+                </section>
+            </section>
+
+            <section class="char-item" data-weapons="doom-2016" data-weapon="doom-eternal">
+                <header class="text">
+                    <h2>
+                        Super Shotgun
+                    </h2>
+                </header>
+
+                <figure>
+                    <img class="char-image-big" src="images/super_shotgun.jpg" alt="Super Shotgun">
+                </figure>
+
+                <h3>Game appearances:</h3>
+                <p>DOOM 2016, DOOM Eternal (Heavy Cannon)</p>
+
+                <h3>DLC appearances:</h3>
+                <p>The Ancient Gods Part One + Two</p>
+
+                <button class="modalButton" data-weapon-button value="super_shotgun">
+                    Show More!
+                </button>
+
+                <section class="modal" data-weapon="super_shotgun" id="super_shotgun">
+                    <section class="char-modal">
+                        <section class="close-button" data-weapon-close-button="super_shotgun">&times;</section>
+                        <h2>Super Shotgun</h2>
+
+                        <h3>DOOM 2016</h3>
+                        <p class="ws-pre">
+                            The Super Shotgun is a weapon featured in Doom (2016).
+
+                            It's a traditional style double barreled, break action shotgun which holds 2 shots at a time which cannot be fired independently (unless upgraded). It's more powerful than the Combat Shotgun but requires frequent reloads due to the small capacity. Unlike most weapons, no modifications can be added to the Super Shotgun, though specific improvements can be made.
+                        </p>
+
+                        <h3>Modifications</h3>
+                        <table class="weapon-table">
+                            <tbody>
+                            <tr>
+                                <th colspan="3" class="ws-pre">
+                                    Improvements
+
+                                    <small>These upgrades will increase the effectiveness of this weapon.</small>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Faster Reload</b>
+                                </td>
+                                <td>
+                                    Decreases the time to reload the next shot.
+                                </td>
+                                <td rowspan="2">
+                                    3 / 6 Weapon Upgrade Points
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Uranium Coating</b>
+                                </td>
+                                <td>
+                                    Shots penetrate through targets.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Double Trouble</b>
+                                </td>
+                                <td>
+                                    Fire twice with the Super Shotgun before having to reload.
+                                </td>
+                                <td>
+                                    Purchase all upgrades and complete the Weapon Mastery challenge
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Super_shotgun/Doom_(2016)" target="_blank">(link)</a>
+
+                        <h3>DOOM Eternal</h3>
+                        <p class="ws-pre">
+                            The Super Shotgun returns in Doom Eternal, being the 5th primary weapon obtained in the campaign.
+
+                            The Super Shotgun functions mostly the same as its counterpart in Doom (2016). However, it has an additional feature in the form of the Meat Hook. This functions as a grappling hook, allowing the Doom Slayer to grapple onto enemies and drag himself towards them for a devastating close-range blast. Unlike other weapons, the Super Shotgun lacks additional mods, and the only one it has is permanently attached. However, improvements can be made.
+                        </p>
+
+                        <h3>Upgrades</h3>
+                        <table class="weapon-table">
+                            <thead>
+                            <tr>
+                                <th>
+                                    Upgrade
+                                </th>
+                                <th>
+                                    Effect
+                                </th>
+                                <th>
+                                    Cost/Challenge
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    Quick Hook
+                                </td>
+                                <td>
+                                    Meat Hook recharge time is reduced by 25%.
+                                </td>
+                                <td>
+                                    3 Weapon Points
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Fast Hands
+                                </td>
+                                <td>
+                                    Super Shotgun reload speed increased by 33%.
+                                </td>
+                                <td>
+                                    6 Weapon Points
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Flaming Hook
+                                </td>
+                                <td>
+                                    The Meat Hook will set enemies on fire for a brief time, causing them to drop armor from a Super Shotgun blast.
+                                </td>
+                                <td>
+                                    Defeat 50 demons with the Super Shotgun while using the Meat Hook
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Super_shotgun/Doom_Eternal" target="_blank">(link)</a>
+                    </section>
+                </section>
+            </section>
+
+            <section class="char-item" data-weapons="doom-2016" data-weapon="doom-eternal">
+                <header class="text">
+                    <h2>
+                        Plasma Rifle/Gun
+                    </h2>
+                </header>
+
+                <figure>
+                    <img class="char-image-big" src="images/plasma_rifle.png" alt="Plasma Rifle">
+                </figure>
+
+                <h3>Game appearances:</h3>
+                <p>DOOM 2016, DOOM Eternal (Plasma Gun)</p>
+
+                <h3>DLC appearances:</h3>
+                <p>The Ancient Gods Part One + Two</p>
+
+                <button class="modalButton" data-weapon-button value="plasma_rifle">
+                    Show More!
+                </button>
+
+                <section class="modal" data-weapon="plasma_rifle" id="plasma_rifle">
+                    <section class="char-modal">
+                        <section class="close-button" data-weapon-close-button="plasma_rifle">&times;</section>
+                        <h2>Plasma Rifle</h2>
+
+                        <h3>DOOM 2016</h3>
+                        <p class="ws-pre">
+                            Plasma Rifle is a weapon featured in Doom (2016).
+
+                            Based on an early 21st-century high-intensity plasma gun design, it has been enhanced with Argent energy technology developed at the UAC Mars Base. After these enhancements, it has become standard-issue equipment for many militaries and has obsoleted the heavy assault rifle. Its plasmoid projectiles cause damage through both kinetic and thermal energy. It has a high rate of fire, emitting small bright blue discrete spheres of plasma. Unlike previous versions of the weapon, the plasma spheres have a small blast damage effect. This can be substantially increased through the use of the weapon's modified firing mode - a single larger plasma orb will be emitted which detonates in air, covering the nearby area in burning napalm-like plasma for a short period.
+                        </p>
+
+                        <h3>Modifications</h3>
+                        <p class="ws-pre">
+                            <b>Stun Bomb</b>
+
+                            This modification condenses multiple plasmoids into a single pulse. The resulting discharge exceeds the Franheiser limit, creating a string of Birkeland currents. The resulting filamentary structure will incapacitate any target caught within the radius for a few seconds. This modification requires cooling between uses.
+
+                            <b>Heat Blast</b>
+
+                            A copper crucible attached to the focusing lens of the Plasma Rifle absorbs residual thermal energy from the weapon and can discharge it instantly by transferring the heat to a borosilicate diffusion chamber. This creates a heat wave from the end of the weapon that causes localized damage and sometimes creates a pressure wave that will knock back targets. The crucible recharges with normal use of the weapon. While the operator of the weapon is partially shielded from the charge, it is recommended that a thermal protection uniform (such as the X suit prototypes) be worn while operating this modification.
+
+                            -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Plasma_gun/Doom_(2016)" target="_blank">(link)</a>
+                        </p>
+
+                        <h3>DOOM Eternal</h3>
+                        <p class="ws-pre">
+                            Making a return in Doom Eternal, the Plasma Rifle (or UAC D-93 Model Plasma Rifle) has undergone a redesign. It's now very similar in appearance to the Plasma Gun from the classic games and looks much bulkier when compared to the 2016 version, which resembles a bulkier version of the one featured in Doom 3.
+
+                            The primary fire is essentially the same as before, a machine gun with slightly slower-moving projectiles that need to be led on distant targets, but is much stronger than it was before: one of its mods is an altered version of one from the previous game, while the other is entirely new.
+                        </p>
+
+                        <h3>Modifications</h3>
+                        <table class="weapon-table">
+                            <thead>
+                            <tr>
+                                <th>
+                                    Modification
+                                </th>
+                                <th>
+                                    Upgrades
+                                </th>
+                                <th>
+                                    Mastery
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    Heat Blast
+                                </td>
+                                <td class="ws-pre">Quick Fire
+                                    Super Heated Rounds
+                                </td>
+                                <td>
+                                    Power Surge
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Microwave Beam
+                                </td>
+                                <td class="ws-pre">Faster Beam Charge
+                                    Increased Range
+                                </td>
+                                <td>
+                                    Concussive Blast
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Plasma_gun/Doom_Eternal" target="_blank">(link)</a>
+                    </section>
+                </section>
+            </section>
+
+            <section class="char-item" data-weapons="doom-2016" data-weapon="doom-eternal">
+                <header class="text">
+                    <h2>
+                        Rocket Launcher
+                    </h2>
+                </header>
+
+                <figure>
+                    <img class="char-image-big" src="images/rocket_launcher.jpg" alt="Rocket Launcher">
+                </figure>
+
+                <h3>Game appearances:</h3>
+                <p>DOOM 2016, DOOM Eternal</p>
+
+                <h3>DLC appearances:</h3>
+                <p>The Ancient Gods Part One + Two</p>
+
+                <button class="modalButton" data-weapon-button value="rocket_launcher">
+                    Show More!
+                </button>
+
+                <section class="modal" data-weapon="rocket_launcher" id="rocket_launcher">
+                    <section class="char-modal">
+                        <section class="close-button" data-weapon-close-button="rocket_launcher">&times;</section>
+                        <h2>Combat Shotgun</h2>
+
+                        <h3>DOOM 2016</h3>
+                        <p class="ws-pre">
+                            The Rocket Launcher is a weapon featured in Doom (2016).
+
+                            "This weapon has seen little design modification since its development in the late 21st century. It is standard issue to Heavy Weapons Specialists in all military forces due to its unparalleled direct impact and radius damage. The UAC improved the design slightly by adding an automated quick reload. The weapon casing has been retrofitted to accept UAC developed modifications."
+                        </p>
+
+                        <h3>Modifications</h3>
+                        <table class="weapon-table">
+                            <tbody>
+                            <tr>
+                                <th colspan="3" class="ws-pre">
+                                    Remote Detonation
+
+                                    <small>Press the Weapon Mod button to detonate any rockets in flight.</small>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Improved Warhead</b>
+                                </td>
+                                <td>
+                                    Using Remote Detonate will generate a larger rocket explosion.
+                                </td>
+                                <td rowspan="2">
+                                    3 / 6 Weapon Upgrade Points
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Jagged Shrapnel</b>
+                                </td>
+                                <td>
+                                    Demons that are hit by a Remote Detonation will be pierced with additional shrapnel and continue to take damage for a short time.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>External Payload</b>
+                                </td>
+                                <td>
+                                    Explosives are now mounted around the rocket, allowing a Remote Detonation to occur without destroying the projectile.
+                                </td>
+                                <td>
+                                    Purchase all upgrades and complete the Weapon Mastery challenge
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Mastery Challenge</b>
+                                </td>
+                                <td>
+                                    Unlocks the "External Payload" upgrade.
+                                </td>
+                                <td>
+                                    Kill three enemies with a single remote-detonated blast 15 times.
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="weapon-table">
+                            <tbody>
+                            <tr>
+                                <th colspan="3" class="ws-pre">
+                                    Lock-on Burst
+
+                                    <small>Press and hold the Weapon Mod button to lock onto a target. Once locked, firing will quickly launch three rockets at the target.</small>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Quick Lock</b>
+                                </td>
+                                <td>
+                                    Lock onto demons much faster.
+                                </td>
+                                <td rowspan="2">
+                                    3 / 6 Weapon Upgrade Points
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Faster Recovery</b>
+                                </td>
+                                <td>
+                                    The time before another lock can be acquired is reduced.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Multi-Targeting</b>
+                                </td>
+                                <td>
+                                    Holding the Weapon Mod button to lock now supports up to three targets. Rockets will be divided amongst established locks.
+                                </td>
+                                <td>
+                                    Purchase all upgrades and complete the Weapon Mastery challenge
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Mastery Challenge</b>
+                                </td>
+                                <td>
+                                    Unlocks the "Multi-Targeting" upgrade.
+                                </td>
+                                <td>
+                                    Kill five Summoners with lock-on bursts.
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Rocket_launcher/Doom_(2016)" target="_blank">(link)</a>
+
+                        <h3>DOOM Eternal</h3>
+                        <p class="ws-pre">
+                            The Rocket Launcher, also called the Paingiver, is a weapon in Doom Eternal. It has been redesigned from its previous incarnation, to be based on the UAC Cultist and even the Doom Hunter's arm cannon.[1] Its remote-detonation mod and lock-on burst return from Doom 2016, but they appear to function differently in terms of upgrades and mastery.
+
+                            Comparatively to its previous counterparts. The rocket launcher does a heavy amount of damage with both impact and splash being increased. Less ammo is carried, With it topped off at 13 rockets max making constant resupplies required.
+                        </p>
+
+                        <h3>Modifications</h3>
+                        <table class="weapon-table">
+                            <thead>
+                            <tr>
+                                <th>
+                                    Modification
+                                </th>
+                                <th>
+                                    Upgrades
+                                </th>
+                                <th>
+                                    Mastery
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    Remote Detonate
+                                </td>
+                                <td class="ws-pre">Proximity Fire
+                                    Concussive Blast
+                                </td>
+                                <td>
+                                    Explosive Array
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Lock-On Burst
+                                </td>
+                                <td class="ws-pre">Fast Reset
+                                    Quick Lock
+                                </td>
+                                <td>
+                                    Dual Lock
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Rocket_launcher/Doom_Eternal" target="_blank">(link)</a>
+                    </section>
+                </section>
+            </section>
+
+            <section class="char-item" data-weapons="doom-2016">
+                <header class="text">
+                    <h2>
+                        Siphon Grenade
+                    </h2>
+                </header>
+
+                <figure>
+                    <img class="char-image-big" src="images/siphon_grenade.jpg" alt="Siphon Grenade">
+                </figure>
+
+                <h3>Game appearances:</h3>
+                <p>DOOM 2016</p>
+
+                <h3>DLC appearances:</h3>
+                <p>None</p>
+
+                <button class="modalButton" data-weapon-button value="siphon_grenade">
+                    Show More!
+                </button>
+
+                <section class="modal" data-weapon="siphon_grenade" id="siphon_grenade">
+                    <section class="char-modal">
+                        <section class="close-button" data-weapon-close-button="siphon_grenade">&times;</section>
+                        <h2>Siphon Grenade</h2>
+
+                        <p class="ws-pre">
+                            The Siphon Grenade is a grenade that leeches health away from enemies to replenish the thrower, first acquired in the level Lazarus Labs. It creates a short-duration dome-shaped field which deals damage-over-time to all enemies within it, with all such damage being transferred over as health. It is an equipment item, and recharges after use.
+
+                            When combined with the Equipment Power Rune, the rate of health restoration is increased and the Siphon Grenade gains the ability to fill up the Slayer's armor once health is fully replenished. This makes it extremely valuable when combined with the Rich Get Richer Rune, and far more effective in combination with this Rune than using Armored Offensive.
+
+                            -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Siphon_Grenade" target="_blank">(link)</a>
+                        </p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="char-item" data-weapons="doom-2016" data-weapon="doom-eternal">
+                <header class="text">
+                    <h2>
+                        Chaingun
+                    </h2>
+                </header>
+
+                <figure>
+                    <img class="char-image-big" src="images/chaingun.jpg" alt="Chaingun">
+                </figure>
+
+                <h3>Game appearances:</h3>
+                <p>DOOM 2016, DOOM Eternal</p>
+
+                <h3>DLC appearances:</h3>
+                <p>The Ancient Gods Part One + Two</p>
+
+                <button class="modalButton" data-weapon-button value="chaingun">
+                    Show More!
+                </button>
+
+                <section class="modal" data-weapon="chaingun" id="chaingun">
+                    <section class="char-modal">
+                        <section class="close-button" data-weapon-close-button="chaingun">&times;</section>
+                        <h2>Chaingun</h2>
+
+                        <h3>DOOM 2016</h3>
+                        <p class="ws-pre">
+                            Delta-12 Chaingun, or simply Chaingun, is a weapon featured in Doom (2016). Serving as a heavier-duty alternative to the Heavy Assault Rifle, the newest incarnation of the classic weapon features an extremely high rate of fire with its famous six-barreled design.
+                        </p>
+
+                        <h3>Modifications</h3>
+                        <table class="weapon-table">
+                            <tbody>
+                            <tr>
+                                <th colspan="3" class="ws-pre">
+                                    Gatling Rotator
+
+                                    <small>The Weapon Mod button can spin up the Chaingun barrels without firing.</small>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Improved Torque</b>
+                                </td>
+                                <td>
+                                    Significantly increases the spin up speed of the Gatling Rotator.
+                                </td>
+                                <td rowspan="2">
+                                    3 / 6 Weapon Upgrade Points
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Uranium Coating</b>
+                                </td>
+                                <td>
+                                    Bullets penetrate through targets.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Incendiary Rounds</b>
+                                </td>
+                                <td>
+                                    Bullets deal more damage when the Chaingun reaches its maximum rate of fire.
+                                </td>
+                                <td>
+                                    Purchase all upgrades and complete the Weapon Mastery challenge
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Mastery Challenge</b>
+                                </td>
+                                <td>
+                                    Unlocks the "Incendiary Rounds" upgrade.
+                                </td>
+                                <td>
+                                    Kill five enemies with the Gatling Rotator mod within five seconds.
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="weapon-table">
+                            <tbody>
+                            <tr>
+                                <th colspan="3" class="ws-pre">
+                                    Mobile Turret
+
+                                    <small>Hold the Weapon Mod button to transform the weapon barrels into a Mobile Turret. It will stall if it overheats.</small>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Rapid Deployment</b>
+                                </td>
+                                <td>
+                                    Drastically decrease the transformation time for the Mobile Turret.
+                                </td>
+                                <td rowspan="2">
+                                    3 / 6 Weapon Upgrade Points
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Uranium Coating</b>
+                                </td>
+                                <td>
+                                    Bullets penetrate through targets.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Ultimate Cooling</b>
+                                </td>
+                                <td>
+                                    The Mobile Turret mode will no longer stall.
+                                </td>
+                                <td>
+                                    Purchase all upgrades and complete the Weapon Mastery challenge
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Mastery Challenge</b>
+                                </td>
+                                <td>
+                                    Unlocks the "Ultimate Cooling" upgrade.
+                                </td>
+                                <td>
+                                    Kill four enemies in a single deployment five times.
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Chaingun/Doom_(2016)" target="_blank">(link)</a>
+
+                        <h3>DOOM Eternal</h3>
+                        <p class="ws-pre">
+                            The Chaingun returns to Doom Eternal with a new look. It no longer requires a spinup time to fire at maximum speed, and it uses the same ammo type as the Heavy Cannon.
+
+                            Its Mobile Turret mod also returns to the fray, only it has four sets of barrels for maximum firepower. The turret stalls if it overheats. It also has an Energy Shield mod that absorbs damage for a short time. For the Mobile Turret mod, it seems impossible to actually make the weapon overheat when in turret mode, as shown by <a class="remove-decoration txt-white" href="https://www.youtube.com/watch?v=rbw2Sxt0w3c" target="_blank">this</a> video.
+                        </p>
+
+                        <h3>Modifications</h3>
+                        <table class="weapon-table">
+                            <thead>
+                            <tr>
+                                <th>
+                                    Modification
+                                </th>
+                                <th>
+                                    Upgrades
+                                </th>
+                                <th>
+                                    Mastery
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    Mobile Turret
+                                </td>
+                                <td class="ws-pre">Rapid Deploy: Turret mode transform speed +50% (Cost: 3)
+                                    Fast Gunner: Increased movement speed while in Mobile Turret mode (Cost: 6)
+                                </td>
+                                <td>
+                                    Ultimate Cooling: Turret no longer stalls (Kill 5 enemies with a single turret without overheating, ten times.)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Energy Shield
+                                </td>
+                                <td class="ws-pre">Faster Recovery: Energy Shield recharge time -37.5% (Cost: 3)
+                                    Dash Smash: Dashing into Heavy demons will cause them to falter (Cost: 6)
+                                </td>
+                                <td>
+                                    Shield Launch: Dealing enough damage with the Chaingun while the Energy Shield is active will launch it forward on release. Any demons hit by this projectile will falter. (Deal 20,000 damage while Energy Shield is active.)
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Chaingun/Doom_Eternal" target="_blank">(link)</a>
+                    </section>
+                </section>
+            </section>
+
+            <section class="char-item" data-weapons="doom-2016" data-weapon="doom-eternal">
+                <header class="text">
+                    <h2>
+                        Chainsaw
+                    </h2>
+                </header>
+
+                <figure>
+                    <img class="char-image-big" src="images/chainsaw.png" alt="Chainsaw">
+                </figure>
+
+                <h3>Game appearances:</h3>
+                <p>DOOM 2016, DOOM Eternal</p>
+
+                <h3>DLC appearances:</h3>
+                <p>The Ancient Gods Part One + Two</p>
+
+                <button class="modalButton" data-weapon-button value="chainsaw">
+                    Show More!
+                </button>
+
+                <section class="modal" data-weapon="chainsaw" id="chainsaw">
+                    <section class="char-modal">
+                        <section class="close-button" data-weapon-close-button="chainsaw">&times;</section>
+                        <h2>Chainsaw</h2>
+
+                        <h3>DOOM 2016</h3>
+                        <p class="ws-pre">
+                            It allows the player to trigger a unique glory kill on a demon (provided that they have enough fuel). Small demons like the Possessed or Imps only require 1 fuel to kill, larger demons like Revenants or Pinkies need 3 fuel and finally Barons of Hell and Mancubi need 5 fuel. Demons killed by the chainsaw will drop large amounts of ammo, almost immediately refilling all ammo. As such, the most intuitive time to use the chainsaw is when the player is low on ammo. However, the chainsaw can alternatively be used to instantly take down a high-priority threat like the Mancubus, which is viable as there are runes like Rich get Richer and Ammo Boost and as the Slayer can get ammunition from even non-chainsaw kills when low on ammunition.
+
+                            The chainsaw starts out with a capacity of three fuel, but can be upgraded when the player uses an Argent Energy Cell to upgrade his ammo capacity, with each cell upgrading the capacity by one.
+
+                            The chainsaw's brand is "Painsaw," which may be seen written on the body of the saw.
+
+                            -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Chainsaw/Doom_(2016)" target="_blank">(link)</a>
+                        </p>
+
+                        <h3>DOOM Eternal</h3>
+                        <p class="ws-pre">
+                            The Chainsaw is a returning weapon in Doom Eternal. It functions the same as before, ripping and tearing open enemies to spill ammo and guts. The difference is that it automatically refills 1 gallon after being fully depleted, and it holds only 3 gallons (originally up to 7 in Doom 2016), but its low fuel count is made up for in brutality. Fodders and the Tentacle take one pip to chainsaw, Heavies take three, whilst Ambients other than the Tentacle and Super Heavies cannot be chainsawed.
+
+                            The Chainsaw is much more integral to the gameplay than its predecessor in Doom 2016: while it is weaker compared to its predecessor, the Slayer has very limited ammunition resupply options in Doom Eternal, limited only to pickups and shotgun shell resupplies from killing units with a fully upgraded Full Auto Mod outside the usage of the chainsaw.
+
+                            -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Chainsaw/Doom_Eternal" target="_blank">(link)</a>
+                        </p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="char-item" data-weapons="doom-2016">
+                <header class="text">
+                    <h2>
+                        Hologram
+                    </h2>
+                </header>
+
+                <figure>
+                    <img class="char-image-big" src="images/hologram.jpg" alt="Hologram">
+                </figure>
+
+                <h3>Game appearances:</h3>
+                <p>DOOM 2016</p>
+
+                <h3>DLC appearances:</h3>
+                <p>None</p>
+
+                <button class="modalButton" data-weapon-button value="hologram">
+                    Show More!
+                </button>
+
+                <section class="modal" data-weapon="hologram" id="hologram">
+                    <section class="char-modal">
+                        <section class="close-button" data-weapon-close-button="hologram">&times;</section>
+                        <h2>Hologram</h2>
+
+                        <p class="ws-pre">
+                            The Hologram is a handheld device that, when thrown, will display a hologram of the Doom slayer armed with a Plasma Gun to distract enemies. However, whilst the hologram can fire the weapon to further illustrate its illusion, the weapon cannot damage enemies. It is first acquired in the level Argent Energy Tower. It is an equipment item, and recharges after use.
+
+                            Since a distracted enemy will engage the Hologram even if the Slayer moves closer to them, it is particularly useful against enemies such as Pinkies and especially Possessed Security, as the latter will point their shield at the decoy.
+
+                            When used with the Equipment Power Rune in effect, the decoy gains the ability to deal damage to enemies: in addition, the Rune makes Holograms last longer. When Mastered, the Hologram will not be destroyed if an enemy attacks it directly.
+
+                            The Hologram is also usable in multiplayer in an attempt to fool enemy players. The hologram here functions slightly different from its singleplayer counterpart, as it will first run forward when activated while firing its weapon (still doing no actual damage, only being for aesthetics); it can then be controlled to stop running and stand still.
+
+                            -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Hologram" target="_blank">(link)</a>
+                        </p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="char-item" data-weapon="doom-eternal">
+                <header class="text">
+                    <h2>
+                        Ballista
+                    </h2>
+                </header>
+
+                <figure>
+                    <img class="char-image-big" src="images/ballista.jpg" alt="Ballista">
+                </figure>
+
+                <h3>Game appearances:</h3>
+                <p>DOOM Eternal</p>
+
+                <h3>DLC appearances:</h3>
+                <p>The Ancient Gods Part One + Two</p>
+
+                <button class="modalButton" data-weapon-button value="ballista">
+                    Show More!
+                </button>
+
+                <section class="modal" data-weapon="ballista" id="ballista">
+                    <section class="char-modal">
+                        <section class="close-button" data-weapon-close-button="ballista">&times;</section>
+                        <h2>Ballista</h2>
+
+                        <p class="ws-pre">
+                            The Ballista is a weapon in Doom Eternal. It is similar to the previous game's Gauss Cannon, and runs on Energy cells. The Ballista is acquired in the Fortress of Doom after completing Doom Hunter Base: it is presented as a mission objective to get it, so it cannot be missed.
+                        </p>
+
+                        <h3>Modifications</h3>
+                        <table class="weapon-table">
+                            <thead>
+                            <tr>
+                                <th>
+                                    Modification
+                                </th>
+                                <th>
+                                    Upgrades
+                                </th>
+                                <th>
+                                    Mastery
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    Arbalest
+                                </td>
+                                <td class="ws-pre">Full Speed
+                                    Stronger Explosion
+                                </td>
+                                <td>
+                                    Instant Salvo
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Destroyer Blade
+                                </td>
+                                <td class="ws-pre">Charging Blast
+                                    Rapid Chains
+                                </td>
+                                <td>
+                                    Incremental Blade
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Ballista" target="_blank">(link)</a>
+                    </section>
+                </section>
+            </section>
         </section>
 
-        <header class="intro">
+        <header class="intro" id="multi-player">
             <h1>Multiplayer Weapons</h1>
         </header>
 
-        <section class="char-container">
-            <section class="char-item">
+        <section class="char-container" data-weapons="multi-player">
+            <section class="char-item" data-weapons="doom-2016">
+                <header class="text">
+                    <h2>
+                        Vortex Rifle
+                    </h2>
+                </header>
+
+                <figure>
+                    <img class="char-image-big" src="images/vortex_rifle.jpg" alt="Static Rifle">
+                </figure>
+
+                <h3>Game appearances:</h3>
+                <p>DOOM 2016</p>
+
+                <h3>DLC appearances:</h3>
+                <p>None</p>
+
+                <button class="modalButton" data-weapon-button value="vortex_rifle">
+                    Show More!
+                </button>
+
+                <section class="modal" data-weapon="vortex_rifle" id="vortex_rifle">
+                    <section class="modal-content">
+                        <section class="close-button" data-weapon-close-button="vortex_rifle">&times;</section>
+                        <h2>Vortex Rifle</h2>
+
+                        <p>
+                            The Union Aerospace Tactical Division V-ORT.X Rifle, also known as the Vortex Rifle, is a sniper weapon that fires a burst of energy. It charges the longer the scope is in use, dealing critical damage when fired. A downside of the scope zoom is that a laser sight displays where the player is aiming; this laser sight can be seen by both friendly and enemy players.
+                        </p>
+
+                        <h3>Multiplayer</h3>
+                        <p class="ws-pre">
+                            The Vortex Rifle can be unlocked in the multiplayer at level 2 (it's also available to use in level 1 by choosing "Sniper" default loadout). The player spawns with 12 ammo (20 is the max ammo). The weapon features two fire modes:
+
+                            <b>Primary Fire</b> - A precision long-range energy weapon with a magnified optic. The weapon does 30 damage.
+                            <b>Weapon Mod</b> - Increases magnification and charges to full power output (Hold the Weapon Mod button). When at full power, the weapon does 84 damage on normal body shots and 120 on a headshot.
+
+                            -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Vortex_Rifle" target="_blank">(link)</a>
+                        </p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="char-item" data-weapons="doom-2016">
                 <header class="text">
                     <h2>
                         Burst Rifle
@@ -93,13 +1484,13 @@
                 </header>
 
                 <figure>
-                    <img class="char-image" src="images/burst_rifle.jpg" alt="Burst Rifle">
+                    <img class="char-image-big" src="images/burst_rifle.jpg" alt="Burst Rifle">
                 </figure>
 
                 <h3>Game appearances:</h3>
                 <p>DOOM 2016</p>
 
-                <h3 class="mt-3">DLC appearances:</h3>
+                <h3>DLC appearances:</h3>
                 <p>None</p>
 
                 <button class="modalButton" data-weapon-button value="burst_rifle">
@@ -107,18 +1498,360 @@
                 </button>
 
                 <section class="modal" data-weapon="burst_rifle" id="burst_rifle">
-                    <section class="char-modal">
+                    <section class="modal-content">
                         <section class="close-button" data-weapon-close-button="burst_rifle">&times;</section>
                         <h2>Burst Rifle</h2>
 
                         <p class="ws-pre">
                             The Burst Rifle can be unlocked in the multiplayer at level 3. The player spawns with 60 ammo (90 is the max ammo). The weapon features two fire modes:
 
-                            Primary Fire - A selective-fire battle rifle equipped with reciprocating barrel assembly and 3-round burst mode. Each burst does a total of 30 damage, with 10 damage dealt per round.
+                            <b>Primary Fire</b> - A selective-fire battle rifle equipped with reciprocating barrel assembly and 3-round burst mode. Each burst does a total of 30 damage, with 10 damage dealt per round.
 
-                            Weapon Mod - Aims down the sights and selects a semi-automatic mode using magnum ammunition (Hold the Weapon Mod button). Damage is slightly increased to 16.
+                            <b>Weapon Mod</b> - Aims down the sights and selects a semi-automatic mode using magnum ammunition (Hold the Weapon Mod button). Damage is slightly increased to 16.
 
                             -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Burst_Rifle" target="_blank">(link)</a>
+                        </p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="char-item" data-weapons="doom-2016">
+                <header class="text">
+                    <h2>
+                        Lightning Gun
+                    </h2>
+                </header>
+
+                <figure>
+                    <img class="char-image-big" src="images/lightning_gun.jpg" alt="Lightning Gun">
+                </figure>
+
+                <h3>Game appearances:</h3>
+                <p>DOOM 2016</p>
+
+                <h3>DLC appearances:</h3>
+                <p>None</p>
+
+                <button class="modalButton" data-weapon-button value="lightning_gun">
+                    Show More!
+                </button>
+
+                <section class="modal" data-weapon="lightning_gun" id="lightning_gun">
+                    <section class="modal-content">
+                        <section class="close-button" data-weapon-close-button="lightning_gun">&times;</section>
+                        <h2>Lightning Gun</h2>
+
+                        <p class="ws-pre">
+                            The Lightning Gun is an energy firearm that disperses a constant stream of electricity to the target.
+                        </p>
+
+                        <h3>Multiplayer</h3>
+                        <p class="ws-pre">
+                            The Lightning Gun can be unlocked in the multiplayer at level 14. The player spawns with 150 ammo (250 is the max ammo). The weapon features two fire modes:
+
+                            <b>Primary Fire</b> - Short range energy weapon that fires a constant stream of electricity. The lightning does approximately 8 damage.
+
+                            <b>Weapon Mod</b> - Creates an electrified field upon aiming at and hitting a surface that can damage multiple targets. The lightning does approximately 5 damage.
+
+                            -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Lightning_Gun" target="_blank">(link)</a>
+                        </p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="char-item" data-weapons="doom-2016">
+                <header class="text">
+                    <h2>
+                        Kinetic Mine
+                    </h2>
+                </header>
+
+                <figure>
+                    <img class="char-image-big" src="images/kinetic_mine.jpg" alt="Kinetic Mine">
+                </figure>
+
+                <h3>Game appearances:</h3>
+                <p>DOOM 2016</p>
+
+                <h3>DLC appearances:</h3>
+                <p>None</p>
+
+                <button class="modalButton" data-weapon-button value="kinetic_mine">
+                    Show More!
+                </button>
+
+                <section class="modal" data-weapon="kinetic_mine" id="kinetic_mine">
+                    <section class="modal-content">
+                        <section class="close-button" data-weapon-close-button="kinetic_mine">&times;</section>
+                        <h2>Kinetic Mine</h2>
+
+                        <p class="ws-pre">
+                            The Kinetic Mine is a new item introduced in the Unto the Evil DLC. It is a mine that leaps out and explodes on the victim when in proximity to it. It can be detonated with weapons fire, even after it has detected a target. It is a multiplayer-only equipment item, and recharges after use.
+
+                            -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Kinetic_Mine" target="_blank">(link)</a>
+                        </p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="char-item" data-weapons="doom-2016">
+                <header class="text">
+                    <h2>
+                        Personal Teleporter
+                    </h2>
+                </header>
+
+                <figure>
+                    <img class="char-image-big" src="images/personal_teleporter.jpg" alt="Personal Teleporter">
+                </figure>
+
+                <h3>Game appearances:</h3>
+                <p>DOOM 2016</p>
+
+                <h3>DLC appearances:</h3>
+                <p>None</p>
+
+                <button class="modalButton" data-weapon-button value="personal_teleporter">
+                    Show More!
+                </button>
+
+                <section class="modal" data-weapon="personal_teleporter" id="personal_teleporter">
+                    <section class="modal-content">
+                        <section class="close-button" data-weapon-close-button="personal_teleporter">&times;</section>
+                        <h2>Personal Teleporter</h2>
+
+                        <p class="ws-pre">
+                            The Personal Teleporter is a device that is used for teleporting from one location to another. It is thrown by the player and used to teleport to that location. It can be used to telefrag enemy players if they are standing on the device, and it can be destroyed with weapons fire. It is a multiplayer-only equipment item, and recharges after use.
+
+                            -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Personal_Teleporter_(Doom_2016)" target="_blank">(link)</a>
+                        </p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="char-item" data-weapons="doom-2016">
+                <header class="text">
+                    <h2>
+                        EMG Mark V
+                    </h2>
+                </header>
+
+                <figure>
+                    <img class="char-image-big" src="images/emg_mark_v.jpg" alt="EMG Mark V">
+                </figure>
+
+                <h3>Game appearances:</h3>
+                <p>DOOM 2016</p>
+
+                <h3>DLC appearances:</h3>
+                <p>None</p>
+
+                <button class="modalButton" data-weapon-button value="emg_mark_v">
+                    Show More!
+                </button>
+
+                <section class="modal" data-weapon="emg_mark_v" id="emg_mark_v">
+                    <section class="modal-content">
+                        <section class="close-button" data-weapon-close-button="emg_mark_v">&times;</section>
+                        <h2>EMG Mark V</h2>
+
+                        <p class="ws-pre">
+                            Mark V Pistol is a new multiplayer-only weapon introduced in the Unto the Evil DLC. Like its campaign equivalent, it has a weapon modification that allows the pistol to charge up a shot for increased damage. The player spawns with 30 ammo (50 is the max ammo).
+
+                            This gun can be considered an upgrade to the original EMG because of its increased damage and really fast bullet speed, but it could also be considered a downgrade because it no longer has infinite ammunition which is what made the EMG special.
+
+                            -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/EMG_Mark_V" target="_blank">(link)</a>
+                        </p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="char-item" data-weapons="doom-2016">
+                <header class="text">
+                    <h2>
+                        Hellshot
+                    </h2>
+                </header>
+
+                <figure>
+                    <img class="char-image-big" src="images/hellshot.jpg" alt="Hellshot">
+                </figure>
+
+                <h3>Game appearances:</h3>
+                <p>DOOM 2016</p>
+
+                <h3>DLC appearances:</h3>
+                <p>None</p>
+
+                <button class="modalButton" data-weapon-button value="hellshot">
+                    Show More!
+                </button>
+
+                <section class="modal" data-weapon="hellshot" id="hellshot">
+                    <section class="modal-content">
+                        <section class="close-button" data-weapon-close-button="hellshot">&times;</section>
+                        <h2>Hellshot</h2>
+
+                        <p class="ws-pre">
+                            The Hellshot can be unlocked in the multiplayer at level 6. The player spawns with 30 ammo (60 is the max ammo). The weapon features two fire modes:
+
+                            <b>Primary Fire</b> - An advanced semi-automatic Hell Energy weapon.
+
+                            <b>Weapon Mod</b> - Fires an incendiary round that burns targets on impact.
+
+                            -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Hellshot" target="_blank">(link)</a>
+                        </p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="char-item" data-weapons="doom-2016">
+                <header class="text">
+                    <h2>
+                        Static Rifle
+                    </h2>
+                </header>
+
+                <figure>
+                    <img class="char-image-big" src="images/static_rifle.jpg" alt="Static Rifle">
+                </figure>
+
+                <h3>Game appearances:</h3>
+                <p>DOOM 2016</p>
+
+                <h3>DLC appearances:</h3>
+                <p>None</p>
+
+                <button class="modalButton" data-weapon-button value="static_rifle">
+                    Show More!
+                </button>
+
+                <section class="modal" data-weapon="static_rifle" id="static_rifle">
+                    <section class="modal-content">
+                        <section class="close-button" data-weapon-close-button="static_rifle">&times;</section>
+                        <h2>Static Rifle</h2>
+
+                        <p>
+                            The Static Rifle, also known as the Static Cannon, is a weapon featured in Doom (2016).
+                        </p>
+
+                        <h3>Multiplayer</h3>
+                        <p class="ws-pre">
+                            The Static Rifle can be unlocked in the multiplayer at level 16. The weapon was introduced into the game to help discourage camping tactics, thanks to its unique charging method. As the wielder moves around, the weapon charges up and increases in power; however, if the player stays idle, the weapon's charge drains. The player spawns with 12 ammo (20 is the max ammo). The weapon features two fire modes:
+
+                            <b>Primary Fire</b> - A single shot. The weapon does 20 damage, but can do 60 damage or 79 precision damage when fully charged.
+                            <b>Weapon Mod</b> - Zooms the weapon for better precision at long-range (Hold the Weapon Mod button).
+
+                            -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Static_Rifle" target="_blank">(link)</a>
+                        </p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="char-item" data-weapons="doom-2016">
+                <header class="text">
+                    <h2>
+                        Reaper
+                    </h2>
+                </header>
+
+                <figure>
+                    <img class="char-image-big" src="images/reaper.jpg" alt="Reaper">
+                </figure>
+
+                <h3>Game appearances:</h3>
+                <p>DOOM 2016</p>
+
+                <h3>DLC appearances:</h3>
+                <p>None</p>
+
+                <button class="modalButton" data-weapon-button value="reaper">
+                    Show More!
+                </button>
+
+                <section class="modal" data-weapon="reaper" id="reaper">
+                    <section class="modal-content">
+                        <section class="close-button" data-weapon-close-button="reaper">&times;</section>
+                        <h2>Reaper</h2>
+
+                        <p class="ws-pre">
+                            The Reaper is a multiplayer-only weapon introduced in the Hell Followed DLC. It's a gun that unleashes six-round bursts of Hell energy, and has a weapon modification that allows it to charge up a shot for increased damage. It was recovered directly from Hell, and unleashes tortured souls that annihilate opponents. It appears to be designed similar to the Unmaker from Doom 64.
+
+                            The front end of the weapon has four claws which are normally spread apart, but can contract together to focus the weapon's energy when it is charged. The weapon features a vaguely insectile appearance, especially on its back end, which resembles an arthopod's cerci. The skull inside the weapon is covered by a thin transparent membrane, and its aura changes from blue to orange when the weapon is fired.
+
+                            -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Reaper" target="_blank">(link)</a>
+                        </p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="char-item" data-weapons="doom-2016">
+                <header class="text">
+                    <h2>
+                        Threat Sensor
+                    </h2>
+                </header>
+
+                <figure>
+                    <img class="char-image-big" src="images/threat_sensor.jpg" alt="Threat Sensor">
+                </figure>
+
+                <h3>Game appearances:</h3>
+                <p>DOOM 2016</p>
+
+                <h3>DLC appearances:</h3>
+                <p>None</p>
+
+                <button class="modalButton" data-weapon-button value="threat_sensor">
+                    Show More!
+                </button>
+
+                <section class="modal" data-weapon="threat_sensor" id="threat_sensor">
+                    <section class="modal-content">
+                        <section class="close-button" data-weapon-close-button="threat_sensor">&times;</section>
+                        <h2>Threat Sensor</h2>
+
+                        <p class="ws-pre">
+                            The Threat Sensor is a device in Doom (2016) that, when thrown, attaches to a surface and highlights enemies within its radius. Both allied and enemy players can hear it beep when they are nearby, and it can be destroyed with weapons fire. It is a multiplayer-only equipment item, and recharges after use.
+
+                            It is unknown why it takes so long to unlock (level 38) when it is basically just a weaker Threat Pulse. Thankfully, it does have at least one upside, which is that it can scan an area for far longer than Threat Pulse.
+
+                            -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Threat_Sensor" target="_blank">(link)</a>
+                        </p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="char-item" data-weapons="doom-2016">
+                <header class="text">
+                    <h2>
+                        Tesla Rocket
+                    </h2>
+                </header>
+
+                <figure>
+                    <img class="char-image-mid" src="images/tesla_rocket.jpg" alt="Tesla Rocket">
+                </figure>
+
+                <h3>Game appearances:</h3>
+                <p>DOOM 2016</p>
+
+                <h3>DLC appearances:</h3>
+                <p>None</p>
+
+                <button class="modalButton" data-weapon-button value="tesla_rocket">
+                    Show More!
+                </button>
+
+                <section class="modal" data-weapon="tesla_rocket" id="tesla_rocket">
+                    <section class="modal-content">
+                        <section class="close-button" data-weapon-close-button="tesla_rocket">&times;</section>
+                        <h2>Tesla Rocket</h2>
+
+                        <p class="ws-pre">
+                            The Tesla Rocket is a device that uses electricity bolts to attack every enemy on its thrown path, slowing down as it passes. It is a multiplayer-only equipment item, and recharges after use.
+
+                            -- DOOM Fandom <a class="remove-decoration txt-white" href="https://doom.fandom.com/wiki/Tesla_Rocket" target="_blank">(link)</a>
                         </p>
                     </section>
                 </section>
