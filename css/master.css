@@ -514,6 +514,7 @@ h3 {
         border-radius: 12px;
         border-bottom: 8px solid #333333;
         display: block;
+        width: 80vw;
         margin-bottom: 3vh;
     }
 
@@ -537,8 +538,8 @@ h3 {
     }
 
     .video {
-        width: 90vw;
-        height: 30vh;
+        width: 80vw;
+        height: 50vh;
     }
 
     .story-container {
@@ -573,7 +574,7 @@ h3 {
         border: solid #ffffff;
         border-radius: 12px;
         margin-top: 5vh;
-        width: 90vw;
+        width: 40vw;
     }
 
     .char-image {

@@ -183,7 +183,7 @@ let removeCartItemButtons;
 let newShoppingCart = [];
 let shoppingCart = [];
 
-if (cartItemButtons)
+if (closeCartButton)
 {
     cartItemButtons.forEach(storeItemButton => {
         storeItemButton.addEventListener("click", function () {
