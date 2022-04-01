@@ -174,3 +174,113 @@ if (checkBoxes)
         });
     });
 }
+
+const cartItemButtons = document.querySelectorAll("[data-shop-item-button]");
+const closeCartButton = document.querySelector("[data-cart-close-button]");
+const storeItems = document.querySelectorAll("[data-shop-item]");
+const cartButton = document.getElementById("cartButton");
+let removeCartItemButtons;
+let newShoppingCart = [];
+let shoppingCart = [];
+
+if (cartItemButtons)
+{
+    cartItemButtons.forEach(storeItemButton => {
+        storeItemButton.addEventListener("click", function () {
+            storeItems.forEach(storeItem => {
+                if (storeItemButton.getAttribute("data-shop-item-button") === storeItem.getAttribute("data-shop-item"))
+                {
+                    newShoppingCart.push(storeItem);
+                }
+            });
+        });
+    });
+
+    cartButton.addEventListener("click", showShoppingCart);
+    closeCartButton.addEventListener("click", toggleModal);
+}
+
+function createShoppingCart()
+{
+    if (shoppingCart !== newShoppingCart || newShoppingCart)
+    {
+        const cartHolder = document.getElementById("shopModal");
+
+        newShoppingCart.forEach(cartItem => {
+            const removeCartItemButton = document.createElement("section");
+            const newSection = document.createElement("section");
+            const newFigure = document.createElement("figure");
+            const priceHeader = document.createElement("h3");
+            const newHeader = document.createElement("h2");
+
+            Array.from(cartItem.children).forEach(childItem => {
+                if (childItem.outerHTML.includes("h2"))
+                {
+                    const headerContent = document.createTextNode(childItem.innerHTML);
+
+                    newHeader.appendChild(headerContent);
+                }
+
+                if (childItem.outerHTML.includes("figure"))
+                {
+                    const newImage = document.createElement("img");
+
+                    newImage.src = childItem.firstElementChild.src;
+                    newImage.alt = childItem.firstElementChild.alt;
+                    newImage.classList.add("shop-item-image");
+
+                    newFigure.appendChild(newImage);
+                }
+
+                if (childItem.outerHTML.includes("h3"))
+                {
+                    if (childItem.firstElementChild !== null)
+                    {
+                        const headerContent = document.createTextNode(childItem.firstElementChild.innerHTML);
+
+                        priceHeader.appendChild(headerContent);
+                    }
+                }
+            });
+
+            removeCartItemButton.setAttribute("data-remove-cart-item", cartItem.firstElementChild.innerHTML);
+            removeCartItemButton.classList.add("remove-button");
+            removeCartItemButton.textContent = "X";
+
+            newSection.appendChild(removeCartItemButton);
+            newSection.classList.add("shop-modal-item");
+            newSection.appendChild(newHeader);
+            newSection.appendChild(newFigure);
+            newSection.appendChild(priceHeader);
+
+            cartHolder.appendChild(newSection);
+        });
+
+        removeCartItemButtons = "";
+        removeCartItemButtons = document.querySelectorAll("[data-remove-cart-item]");
+
+        shoppingCart = newShoppingCart;
+        newShoppingCart = [];
+    }
+}
+
+function showShoppingCart()
+{
+    createShoppingCart();
+
+    for (let i = 0; i < removeCartItemButtons.length; i++)
+    {
+        removeCartItemButtons[i].addEventListener("click", function ()
+        {
+            removeCartItemButtons[i].parentElement.style.display = "none";
+            removeCartItemButtons[i].remove();
+        });
+    }
+
+    toggleModal();
+}
+
+function checkout()
+{
+    alert("Thank you for shopping at the DOOM store, we hope to see you soon again!");
+}

@@ -123,7 +123,8 @@ h3 {
 }
 
 .close-button {
-    float: right;
+    position: fixed;
+    right: 1rem;
     width: 1.5rem;
     line-height: 1.5rem;
     text-align: center;
@@ -133,6 +134,19 @@ h3 {
 }
 
 .close-button:hover {
+    background-color: black;
+}
+
+.remove-button {
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: #555555;
+}
+
+.remove-button:hover {
     background-color: black;
 }
 
@@ -159,6 +173,52 @@ h3 {
 .modalButton:hover {
     color: #ffffff;
     background-color: #333333;
+}
+
+.cartButton {
+    padding: 0.25em 1em;
+    margin: 0.7em;
+    border: 0.1em solid #222222;
+    border-radius: 24px;
+    box-sizing: border-box;
+    font-size: 20px;
+    color: #222222;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.cartButton:hover {
+    color: #ffffff;
+    background-color: #333333;
+}
+
+.shop-modal {
+    position: absolute;
+    overflow-y: auto;
+    top: 50%;
+    left: 50%;
+    max-height: calc(100vh - 200px);
+    transform: translate(-50%, -50%);
+    background-color: #333333;
+    padding: 1rem 1.5rem;
+    width: 85vw;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.shop-item-image {
+    width: 100%;
+    border: 2px solid rgba(120, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+.shop-item-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px 0 rgba(120, 0, 0, 0.2), 0 6px 20px 0 rgba(120, 0, 0, 0.19);
+}
+
+.shop-part {
+    text-align: center;
 }
 
 .mt-3 {
@@ -307,19 +367,6 @@ h3 {
         width: 40vw;
     }
 
-    .shop-item {
-        background: #222222;
-        border-radius: 12px;
-        border: 4px solid #222222;
-        display: block;
-        margin: 1em;
-        width: 25vw;
-    }
-
-    .shop-item-image {
-        width: 25vw;
-    }
-
     .video {
         border-top-left-radius: 11px;
         border-top-right-radius: 11px;
@@ -384,6 +431,36 @@ h3 {
         padding-right: 4.9vw;
         width: 15vw;
     }
+
+    .shop-container {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .shop-item {
+        background: #222222;
+        border-radius: 12px;
+        border: 4px solid #222222;
+        display: block;
+        margin: 1em;
+        width: 25vw;
+        transition: width 0.3s;
+    }
+
+    .shop-modal-flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .shop-modal-item {
+        border-radius: 12px;
+        border: 4px solid #222222;
+        width: 25vw;
+        margin: 1.2em;
+    }
 }
 
 @media only screen and (min-width: 801px) and (max-width: 1100px) {
@@ -438,6 +515,25 @@ h3 {
         border-bottom: 8px solid #333333;
         display: block;
         margin-bottom: 3vh;
+    }
+
+    .shop-container {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .shop-item {
+        background: #222222;
+        border-radius: 12px;
+        border: 4px solid #222222;
+        width: 39vw;
+        margin: 1.2em;
+    }
+
+    .shop-item-image {
+        width: 100%;
     }
 
     .video {
@@ -658,5 +754,27 @@ h3 {
     .sort-item {
         font-size: 15px;
         width: 35vw;
+    }
+
+    .shop-item {
+        background: #222222;
+        border-radius: 12px;
+        border: 4px solid #222222;
+        display: block;
+        margin: 1em;
+        width: 85vw;
+    }
+
+    .shop-modal-flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .shop-modal-item {
+        border-radius: 12px;
+        border: 4px solid #222222;
+        width: 85vw;
+        margin: 1.2em;
     }
 }

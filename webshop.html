@@ -42,26 +42,183 @@
 
         <header class="intro">
             <h1>DOOM Store</h1>
+            <button class="modalButton" id="cartButton">Show Cart &#128722;</button>
         </header>
 
-        <section class="flex-container">
-            <section class="shop-item">
+        <section class="modal">
+            <section class="shop-modal">
+                <section class="close-button" data-cart-close-button>&times;</section>
+                <h2>Shopping cart contents</h2>
+
+                <section class="shop-modal-flex" id="shopModal"></section>
+                <button class="modalButton" onclick="checkout()">Checkout</button>
+            </section>
+        </section>
+
+        <section class="shop-container">
+            <section class="shop-item" data-shop-item="doom_eternal_deluxe_edition">
+                <h2>DOOM Eternal Deluxe Edition</h2>
+
                 <figure>
                     <img class="shop-item-image" src="images/doom_eternal_deluxe_edition.jpg" alt="DOOM Eternal Deluxe Edition">
                 </figure>
-                <h2>
-                    DOOM Eternal Deluxe Edition
-                </h2>
-                <p class="ws-pre">
-                    Contents:
-                        - DOOM Eternal Base Game
-                        - BATTLEMODE
-                        - The Ancient Gods - Part One
-                        - The Ancient Gods - Part Two
 
-                    €69,99
+                <h3>Contents:</h3>
+                <p class="ws-pre">
+                    - DOOM Eternal Base Game
+                    - BATTLEMODE
+                    - The Ancient Gods - Part One
+                    - The Ancient Gods - Part Two
                 </p>
-                <button class="">Add to cart</button>
+
+                <section class="shop-part">
+                    <h3 data-shop-item="price">Price: €69,99</h3>
+                    <h3 data-shop-item="release_date">Release date: 20/03/2020</h3>
+                    <button class="cartButton" data-shop-item-button="doom_eternal_deluxe_edition">Add to cart &#128722;</button>
+                </section>
+            </section>
+
+            <section class="shop-item" data-shop-item="doom_eternal_banner">
+                <h2>DOOM Eternal Banner</h2>
+
+                <figure>
+                    <img class="shop-item-image" src="images/doom_eternal_banner.jpg" alt="DOOM Eternal Deluxe Edition">
+                </figure>
+
+                <h3>Dimensions:</h3>
+                <p class="ws-pre">
+                    - Width: 36 in (3 ft or 91.44)
+                    - Height: 48 in (4 ft or 121.92 cm)
+                </p>
+
+                <h3>Materials:</h3>
+                <p class="ws-pre">
+                    - 100% Polyester banner
+                    - 2 metal grommets to hang
+                </p>
+
+                <section class="shop-part">
+                    <h3 data-shop-item="price">Price: €15,-</h3>
+                    <button class="cartButton" data-shop-item-button="doom_eternal_banner">Add to cart &#128722;</button>
+                </section>
+            </section>
+
+            <section class="shop-item" data-shop-item="doom_2016">
+                <h2>DOOM 2016 (reboot)</h2>
+
+                <figure>
+                    <img class="shop-item-image" src="images/doom_2016.jpg" alt="DOOM Eternal Deluxe Edition">
+                </figure>
+
+                <h3>Contents:</h3>
+                <p class="ws-pre">
+                    - DOOM 2016
+                    - Demon Slaying adventures
+                    - A lot of blood
+                    - A good amount of heavy metal
+                </p>
+
+                <section class="shop-part">
+                    <h3 data-shop-item="price">Price: €19,99</h3>
+                    <h3 data-shop-item="release_date">Release date: 13/05/2016</h3>
+                    <button class="cartButton" data-shop-item-button="doom_2016">Add to cart &#128722;</button>
+                </section>
+            </section>
+
+            <section class="shop-item" data-shop-item="doom_eternal_the_ancient_gods_part_2_mousepad">
+                <h2>DOOM Eternal TAC 2 Mousepad</h2>
+
+                <figure>
+                    <img class="shop-item-image" src="images/doom_eternal_the_ancient_gods_part_2.jpg" alt="DOOM Eternal Deluxe Edition">
+                </figure>
+
+                <h3>Materials:</h3>
+                <p class="ws-pre">
+                    - Top: Multi-spandex
+                    - Base: Rubber
+                </p>
+
+                <h3>Measurements:</h3>
+                <p class="ws-pre">
+                    - Height: 15.75 in (40.01 cm)
+                    - Width: 35.44 in (90.02 cm)
+                    - Thickness: 0.12 in (0.3 cm)
+                    - Weight: 23 oz (652.04 g)
+                </p>
+
+                <section class="shop-part">
+                    <h3 data-shop-item="price">Price: €15,-</h3>
+                    <button class="cartButton" data-shop-item-button="doom_eternal_the_ancient_gods_part_2_mousepad">Add to cart &#128722;</button>
+                </section>
+            </section>
+
+            <section class="shop-item" data-shop-item="doom_eternal_maykr_puzzles_1000">
+                <h2>DOOM Eternal Maykr Puzzles 1000</h2>
+
+                <figure>
+                    <img class="shop-item-image" src="images/doom_eternal_maykr_puzzles_1000.jpg" alt="DOOM Eternal Deluxe Edition">
+                </figure>
+
+                <p class="ws-pre">
+                    - Artwork: Detail of DOOM Eternal key art focusing on the Khan Maykr and other high-level enemies
+                    - Rich colors and details
+                </p>
+
+                <h3>What’s in the box?</h3>
+                <p class="ws-pre">
+                    - 1x 1,000-piece jigsaw puzzle
+                    - 1x poster of the artwork featured in the puzzle
+                    - 1x cotton-laced pouch for the puzzle pieces
+                </p>
+
+                <h3>Finished Puzzle Dimensions:</h3>
+                <p class="ws-pre">
+                    - Width: 26.77 (68 cm)
+                    - Height: 18.9 in (48 cm)
+                </p>
+
+                <h3>Puzzle Piece Specs:</h3>
+                <p class="ws-pre">
+                    - Anti-glare canvas finish
+                    - Fully interlocking fit
+                    - Resistant to bending
+                </p>
+
+                <section class="shop-part">
+                    <h3 data-shop-item="price">Price: €20,-</h3>
+                    <button class="cartButton" data-shop-item-button="doom_eternal_maykr_puzzles_1000">Add to cart &#128722;</button>
+                </section>
+            </section>
+
+            <section class="shop-item" data-shop-item="embroidered_logo_hat">
+                <h2>DOOM Eternal Embroidered Logo Hat</h2>
+
+                <figure>
+                    <img class="shop-item-image" src="images/embroidered_logo_hat.jpg" alt="DOOM Eternal Embroidered Logo Hat">
+                </figure>
+
+                <h3>Design:</h3>
+                <p class="ws-pre">
+                    - “DOOM” logo puff embroidery
+                    - “Eternal” logo flat embroidery
+                    - Slayer symbol embroidered on back
+                </p>
+
+                <h3>Colours:</h3>
+                <p class="ws-pre">
+                    - Black hat
+                    - Red accent (around the brim)
+                    - Custom “Eternal” red tape on interior
+
+                    - Material: 100% cotton
+                    - Flat bill
+                    - Snapback adjustment - one size fits most
+                </p>
+
+                <section class="shop-part">
+                    <h3 data-shop-item="price">Price: €20,-</h3>
+                    <button class="cartButton" data-shop-item-button="embroidered_logo_hat">Add to cart &#128722;</button>
+                </section>
             </section>
         </section>
     </article>
