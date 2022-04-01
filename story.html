@@ -9,22 +9,30 @@
     <title>DOOM (reboot) Story</title>
 </head>
 <body onload="toggleModal()">
-<nav>
+
+<nav class="navBar">
+    <h1 class="mobile-nav-h1">DOOM Series Website</h1>
+
+    <button class="hamburger">
+        <i class="menuIcon">&#x2630;</i>
+        <i class="closeIcon">&#735;</i>
+    </button>
+
     <ul class="topNav">
         <li class="topNav-li">
-            <a href="index.html" target="_blank" class="topNav-li-a navItem">Home</a>
+            <a href="index.html" class="topNav-li-a navItem">Home</a>
         </li>
         <li class="topNav-li">
-            <a href="story.html" target="_blank" class="topNav-li-a navItem">Story</a>
+            <a href="story.html" class="topNav-li-a navItem">Story</a>
         </li>
         <li class="topNav-li">
-            <a href="characters.html" target="_blank" class="topNav-li-a navItem">Characters</a>
+            <a href="characters.html" class="topNav-li-a navItem">Characters</a>
         </li>
         <li class="topNav-li">
-            <a href="weapons.html" target="_blank" class="topNav-li-a navItem">Weapons</a>
+            <a href="weapons.html" class="topNav-li-a navItem">Weapons</a>
         </li>
         <li class="topNav-li">
-            <a href="webshop.html" target="_blank" class="topNav-li-a navItem">Webshop</a>
+            <a href="webshop.html" class="topNav-li-a navItem">Webshop</a>
         </li>
     </ul>
 </nav>
@@ -42,7 +50,7 @@
                 <nav class="story-index">
                     <h2 class="text-center">
                         Story Page Index for fast access
-                        <button class="modalButton">
+                        <button class="modalButton" id="storyToggle">
                             Show spoilers
                         </button>
                     </h2>
@@ -64,7 +72,7 @@
 
                 <section class="modal">
                     <section class="modal-content">
-                        <section class="close-button">&times;</section>
+                        <section class="close-button" id="storyToggleClose">&times;</section>
                         <h2>Hello!</h2>
                         <p class="ws-pre">
                             There are story spoilers ahead, are you sure you want to see them?
